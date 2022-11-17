@@ -2,7 +2,7 @@ from __future__ import print_function
 
 import numpy as np
 from scipy.misc import imsave
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from data_loader import ImageLoader
 from model import ResidualRNN

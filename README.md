@@ -24,17 +24,17 @@ python train.py
 Encoding
 
 ```
-python encode.py --model save/model --input kodim05.png --iters 10 --output compressed.npz
+python encode.py --model save/model --input imgs/kodim05.png --iters 10 --output eval/compressed.npz
 ```
 
 Decoding
 
 ```
-python decode.py --model save/model --input compressed.npz --output compressed.png
+python decode.py --model save/model --input eval/compressed.npz --output eval/compressed.png
 ```
 
 Evaluation, code from Tensorflow's official [repo](https://github.com/tensorflow/models/blob/master/research/compression/image_encoder/msssim.py)
 
 ```
-python msssim.py -o kodim05.png -c compressed.png
+python msssim.py -o imgs/kodim05.png -c eval/compressed.png
 ```
